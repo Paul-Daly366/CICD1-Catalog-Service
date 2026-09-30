@@ -1,4 +1,4 @@
-CICD1 Lab 1
+CICD1 Lab Work
 
 Catalog Service :8082
 
