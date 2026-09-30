@@ -10,6 +10,8 @@ Retrieve products: '/products'
 
 Create product: '/products/'
 
+Get product by id: '/products/{id}'
+
 Wk2: Add JPA + H2 - Done
 
 Wk3: Add OpenFeign communication with Order Service
