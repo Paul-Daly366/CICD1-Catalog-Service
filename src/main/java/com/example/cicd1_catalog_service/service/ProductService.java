@@ -29,4 +29,8 @@ public class ProductService {
         return repository.findById(id).orElseThrow(() -> new
                 ResponseStatusException(HttpStatus.NOT_FOUND,"Product not found"));
     }
+
+    public List<Product> getByMinPrice(double minPrice){
+        return repository.findByMinPrice(minPrice);
+    }
 }

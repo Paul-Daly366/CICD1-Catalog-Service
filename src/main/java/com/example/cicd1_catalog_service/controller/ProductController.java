@@ -33,4 +33,9 @@ public class ProductController {
     public Product getById(@PathVariable Long id){
         return productService.getById(id);
     }
+
+    @GetMapping("/min-price")
+    public List<Product> getByMinPrice(@RequestParam double minPrice){
+        return productService.getByMinPrice(minPrice);
+    }
 }
