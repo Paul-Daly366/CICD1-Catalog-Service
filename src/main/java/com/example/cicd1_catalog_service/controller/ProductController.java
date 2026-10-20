@@ -35,8 +35,14 @@ public class ProductController {
         return productService.getById(id);
     }
 
+    // Controller method for JPQL query
     @GetMapping("/min-price")
     public List<Product> getByMinPrice(@RequestParam double minPrice){
         return productService.getByMinPrice(minPrice);
+    }
+
+    @GetMapping("/by-category")
+    public List<Product> getByCategoryName(@RequestParam String categoryName){
+        return productService.getByCategoryName(categoryName);
     }
 }

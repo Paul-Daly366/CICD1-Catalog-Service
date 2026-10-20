@@ -46,7 +46,12 @@ public class ProductService {
                 ResponseStatusException(HttpStatus.NOT_FOUND,"Product not found"));
     }
 
+    // Service method for JPQL query
     public List<Product> getByMinPrice(double minPrice){
         return repository.findByMinPrice(minPrice);
+    }
+
+    public List<Product> getByCategoryName(String categoryName){
+        return repository.findByCategoryName(categoryName);
     }
 }
