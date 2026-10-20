@@ -1,5 +1,6 @@
 package com.example.cicd1_catalog_service.controller;
 
+import com.example.cicd1_catalog_service.dto.CreateProductRequest;
 import com.example.cicd1_catalog_service.model.Product;
 import com.example.cicd1_catalog_service.service.ProductService;
 import org.springframework.http.HttpStatus;
@@ -25,12 +26,23 @@ public class ProductController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Product addProduct(@RequestBody Product product) {
-        return service.create(product);
+    public Product createProduct(@RequestBody CreateProductRequest request) {
+        return productService.createProduct(request);
     }
 
     @GetMapping("/{id}")
     public Product getById(@PathVariable Long id){
         return productService.getById(id);
+    }
+
+    // Controller method for JPQL query
+    @GetMapping("/min-price")
+    public List<Product> getByMinPrice(@RequestParam double minPrice){
+        return productService.getByMinPrice(minPrice);
+    }
+
+    @GetMapping("/by-category")
+    public List<Product> getByCategoryName(@RequestParam String categoryName){
+        return productService.getByCategoryName(categoryName);
     }
 }
