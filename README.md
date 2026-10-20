@@ -15,3 +15,6 @@ Get product by id: '/products/{id}'
 Wk2: Add JPA + H2 - Done
 
 Wk3: Add OpenFeign communication with Order Service - Done
+
+## SQL and Normalization Lab
+Final db<>fiddle session: https://dbfiddle.uk/kawdX-9t
