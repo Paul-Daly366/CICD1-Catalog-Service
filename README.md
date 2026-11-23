@@ -26,3 +26,5 @@ Wk5: JPQL/JPA
 
 ## SQL and Normalization Lab
 Final db<>fiddle session: https://dbfiddle.uk/kawdX-9t
+
+Lab 7 - Docker
