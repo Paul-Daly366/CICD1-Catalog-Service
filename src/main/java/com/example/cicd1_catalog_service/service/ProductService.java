@@ -30,13 +30,13 @@ public class ProductService {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Category id is required");
         }
 
-        Category category = categoryRepository.findById(request.categoryId())
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.BAD_REQUEST, "Category does not exist"));
+        //Category category = categoryRepository.findById(request.categoryId())
+        //        .orElseThrow(() -> new ResponseStatusException(HttpStatus.BAD_REQUEST, "Category does not exist"));
 
         Product product = new Product();
         product.setName(request.name());
         product.setPrice(request.price());
-        product.setCategory(category);
+        //product.setCategory(category);
 
         return repository.save(product);
     }
